@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning repository...'
+                // Normally, Jenkins auto-checks out the repo
+                // For demo: echo message only
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                // Simulate a build step
+                sh 'echo "Compiling code..."'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Simulate test step
+                sh 'echo "Tests passed!"'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                echo 'Package the application...'
+                // Simulate deploy step
+                sh 'echo "Packaging successfully."'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Simulate deploy step
+                sh 'echo "Deployed successfully."'
+            }
+        }
+    }
+}
