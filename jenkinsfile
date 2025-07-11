@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 // Simulate test step
-                sh 'echo "Tests passed!"'
+                sh 'echo "Tests passed yes!"'
             }
         }
 
